@@ -26,3 +26,14 @@ pub fn print(s: &str) {
 pub fn wasm_alert(s: &str) {
     alert(s);
 }
+
+#[wasm_bindgen]
+pub fn fib(n: u32) -> u32 {
+    if n == 1 {
+        return 1;
+    } else if n == 2 {
+        return 1;
+    } else {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
