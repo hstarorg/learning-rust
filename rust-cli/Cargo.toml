@@ -1,0 +1,22 @@
+[package]
+name = "rust-cli"
+version = "0.1.0"
+edition = "2018"
+authors = ["hstarorg<hm910705@163.com>"]
+license = "MIT"
+description = "A test command tool"
+readme = "README.md"
+homepage = "https://github.com/hstarorg/learning-rust/rust-cli"
+repository = "https://github.com/hstarorg/learning-rust"
+keywords = ["cli", "demo"]
+categories = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.3.23"
+indicatif = "0.16.2"
+
+[dev-dependencies]
+assert_cmd = "2.0.1"
+predicates = "2.0.2"
