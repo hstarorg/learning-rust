@@ -37,3 +37,13 @@ pub fn fib(n: u32) -> u32 {
         return fib(n - 1) + fib(n - 2);
     }
 }
+
+// 使用尾调用优化
+#[wasm_bindgen]
+pub fn fib_tail(n: u32, result: u32, total: u32) -> u32 {
+    if n == 1 || n == 2 {
+        return result;
+    } else {
+        return fib_tail(n - 1, total, result + total);
+    }
+}
